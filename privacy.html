@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — OpenClaw</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 720px; margin: 0 auto; padding: 48px 24px; line-height: 1.65;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.15rem; margin-top: 2em; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(127,127,127,.3); vertical-align: top; }
+    code { background: rgba(127,127,127,.18); padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+    footer { margin-top: 48px; opacity: .7; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <h1>Política de Privacidade</h1>
+  <p><em>Última atualização: 26 de outubro de 2026</em></p>
+
+  <p>
+    Esta política descreve como o aplicativo <strong>OpenClaw</strong> ("o aplicativo")
+    acessa e trata dados. O aplicativo é de uso pessoal, operado por um único usuário
+    em seu próprio computador, e não é distribuído a terceiros.
+  </p>
+
+  <h2>1. Quais dados o aplicativo acessa</h2>
+  <p>Com a autorização explícita do usuário via OAuth 2.0, o aplicativo pode acessar:</p>
+  <table>
+    <tr><th>Serviço</th><th>Escopo</th><th>Finalidade</th></tr>
+    <tr>
+      <td>Gmail</td>
+      <td><code>gmail.readonly</code>, <code>gmail.send</code>, <code>gmail.compose</code>, <code>gmail.modify</code>, <code>gmail.labels</code></td>
+      <td>Ler, buscar, redigir, enviar e organizar mensagens a pedido do próprio usuário.</td>
+    </tr>
+    <tr>
+      <td>Google Calendar</td>
+      <td><code>calendar</code>, <code>calendar.events</code>, <code>calendar.readonly</code></td>
+      <td>Consultar, criar e editar eventos na agenda do próprio usuário.</td>
+    </tr>
+    <tr>
+      <td>Perfil básico</td>
+      <td><code>userinfo.email</code>, <code>userinfo.profile</code>, <code>openid</code></td>
+      <td>Identificar qual conta está autenticada.</td>
+    </tr>
+  </table>
+
+  <h2>2. Onde os dados são processados</h2>
+  <p>
+    O aplicativo roda no computador do próprio usuário e conecta-se diretamente às APIs
+    oficiais do Google (<code>googleapis.com</code>). Não há servidor intermediário
+    operado pelo aplicativo.
+  </p>
+  <p>
+    Para executar os pedidos do usuário, o assistente de IA utiliza modelos de linguagem
+    acessados por meio do <strong>OpenRouter</strong>, que encaminha a requisição ao
+    provedor do modelo escolhido. Por isso, trechos de e-mails e de eventos da agenda
+    relacionados a um pedido podem ser enviados a esses serviços, apenas no momento em
+    que o usuário solicita a tarefa, com a única finalidade de gerar a resposta ou a ação
+    pedida.
+  </p>
+
+  <h2>3. Compartilhamento e uso das informações</h2>
+  <p>
+    O aplicativo <strong>não vende, não aluga e não compartilha</strong> dados do usuário
+    com terceiros, exceto o envio descrito na seção 2, necessário para o funcionamento do
+    assistente. Não há analytics, telemetria, rastreamento ou publicidade.
+  </p>
+  <p>
+    Os dados obtidos das APIs do Google são usados somente para oferecer e melhorar as
+    funcionalidades visíveis ao próprio usuário, não são usados para publicidade nem para
+    treinar modelos de IA generalizados e não são lidos por pessoas, salvo com o
+    consentimento do usuário ou quando exigido por lei.
+  </p>
+  <p>
+    O uso e a transferência para qualquer outro aplicativo das informações recebidas das
+    APIs do Google seguem a
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>,
+    incluindo os requisitos de Uso Limitado.
+  </p>
+
+  <h2>4. Armazenamento e retenção</h2>
+  <p>
+    As credenciais de acesso (tokens OAuth) são armazenadas localmente, em arquivo no
+    computador do usuário, protegido pelas permissões do sistema operacional. O aplicativo
+    não mantém uma base própria com o conteúdo de e-mails ou da agenda: os dados são lidos
+    sob demanda, no momento da consulta. O histórico de conversas do assistente pode conter
+    trechos do que foi consultado e fica armazenado apenas no computador do usuário, que
+    pode apagá-lo a qualquer momento.
+  </p>
+
+  <h2>5. Como revogar o acesso</h2>
+  <p>
+    O usuário pode revogar a autorização a qualquer momento em
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+    Depois da revogação, os tokens deixam de funcionar e o aplicativo perde o acesso às
+    contas Google.
+  </p>
+
+  <h2>6. Contato</h2>
+  <p>
+    Dúvidas sobre esta política:
+    <a href="mailto:fernandocsousa.me@gmail.com">fernandocsousa.me@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="index.html">Voltar</a>
+  </footer>
+</body>
+</html>
